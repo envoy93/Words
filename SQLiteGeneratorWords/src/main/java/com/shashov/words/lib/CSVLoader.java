@@ -1,4 +1,4 @@
-package drugs.shashov.com.lib;
+package com.shashov.words.lib;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

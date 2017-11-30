@@ -1,17 +1,11 @@
-package drugs.shashov.com.lib;
+package com.shashov.words.lib;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class Main {
-    static Connection connection = null;
-
-    private static String JDBC_CONNECTION_URL = "jdbc:sqlite:D:\\WORKSPACE\\Words\\SQLiteGeneratorWords\\res\\word.db";
-
-    public static void main(String[] args) {
-        /*
+/*
         Подготовка файла:
             categories.csv
                 id;parent_id;title;lvl
@@ -37,7 +31,15 @@ public class Main {
             `example`	TEXT NOT NULL,
             PRIMARY KEY(`id`)
         );
-         */
+*/
+
+public class Main {
+    static Connection connection = null;
+
+    private static String JDBC_CONNECTION_URL = "jdbc:sqlite:D:\\WORKSPACE\\Words\\SQLiteGeneratorWords\\res\\word.db";
+
+    public static void main(String[] args) {
+
 
         try {
             CSVLoader loader = new CSVLoader(getCon());
@@ -80,7 +82,6 @@ public class Main {
     private static Connection getCon() {
 
         try {
-            //Class.forName("oracle.jdbc.driver.OracleDriver");
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection(JDBC_CONNECTION_URL);
 
