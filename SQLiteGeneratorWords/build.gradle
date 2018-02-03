@@ -6,12 +6,8 @@ apply plugin: 'application'
 
 sourceSets {
     main {
-        java {
-            srcDir 'src/main/java'
-        }
-        resources {
-            srcDir 'resources'
-        }
+        java.srcDirs = ['src/main/java']
+        resources.srcDirs = ['resources']
     }
 }
 
@@ -27,9 +23,9 @@ repositories {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'drugs.shashov.com.lib.Main'
+        attributes 'Main-Class': 'com.shashov.words.lib.Main'
     }
 }
-mainClassName = "drugs.shashov.com.lib.Main"
+mainClassName = "com.shashov.words.lib.Main"
 sourceCompatibility = "1.8"
 targetCompatibility = "1.8"

@@ -1,9 +1,10 @@
-CREATE TABLE `categories` (
-	`id`	INTEGER NOT NULL UNIQUE,
-	`parent_id`	INTEGER NOT NULL,
-	`title`	TEXT NOT NULL,
-	`lvl`	INTEGER NOT NULL,
-	PRIMARY KEY(`id`)
+CREATE TABLE "categories" ( 
+	`id` INTEGER NOT NULL UNIQUE, 
+	`parent_id` INTEGER NOT NULL, 
+	`title` TEXT NOT NULL, 
+	`lvl` INTEGER NOT NULL, 
+	`position` INTEGER DEFAULT 0, 
+	PRIMARY KEY(`id`) 
 );
 
 CREATE TABLE `words` (

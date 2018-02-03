@@ -8,7 +8,7 @@ import java.sql.SQLException;
 /*
         Подготовка файла:
             categories.csv
-                id;parent_id;title;lvl
+                id;parent_id;title;lvl;position
             words.csv
                 id;category_id;position;is_base;title;translate;transcription;example
 
@@ -36,7 +36,7 @@ import java.sql.SQLException;
 public class Main {
     static Connection connection = null;
 
-    private static String JDBC_CONNECTION_URL = "jdbc:sqlite:D:\\WORKSPACE\\Words\\SQLiteGeneratorWords\\res\\word.db";
+    private static String JDBC_CONNECTION_URL = "jdbc:sqlite:D:\\WORKSPACE\\Words\\SQLiteGeneratorWords\\res\\words.db";
 
     public static void main(String[] args) {
 
@@ -52,6 +52,7 @@ public class Main {
                         ps.setInt(index++, new Integer(nextLine[1]));
                         ps.setString(index++, nextLine[2]);
                         ps.setInt(index++, new Integer(nextLine[3]));
+                        ps.setInt(index++, new Integer(nextLine[4]));
                     },
                     true);
 
