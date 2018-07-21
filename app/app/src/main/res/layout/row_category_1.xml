@@ -9,14 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center|start|top"
-        android:background="#ed4950"
+        android:background="@color/cat1BG"
         android:hyphenationFrequency="none"
         android:maxLines="10"
         android:minLines="1"
         android:padding="@dimen/marginNormal"
         android:text="text"
         android:textAllCaps="true"
-        android:textColor="#fff"
+        android:textColor="@color/cat1Title"
         android:textSize="@dimen/textCaption">
     </TextView>
 

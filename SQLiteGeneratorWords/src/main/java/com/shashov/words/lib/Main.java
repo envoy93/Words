@@ -17,6 +17,8 @@ import java.sql.SQLException;
             `parent_id`	INTEGER NOT NULL,
             `title`	TEXT NOT NULL,
             `lvl`	INTEGER NOT NULL,
+            `position`	INTEGER NOT NULL DEFAULT 0,
+	        `saved`	INTEGER NOT NULL DEFAULT 0,
             PRIMARY KEY(`id`)
         );
 
@@ -25,6 +27,7 @@ import java.sql.SQLException;
             `category_id`	INTEGER NOT NULL,
             `position`	INTEGER NOT NULL,
             `is_base`	INTEGER NOT NULL,
+            `saved`	INTEGER NOT NULL DEFAULT 1,
             `title`	TEXT NOT NULL,
             `translate`	TEXT NOT NULL,
             `transcription`	TEXT NOT NULL,

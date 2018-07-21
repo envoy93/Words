@@ -35,13 +35,8 @@ class CategoriesListAdapter(val categories: ArrayList<Category>, var columns: In
             with(category) {
                 itemView.categoryName1.text = title
                 itemView.list.layoutManager = GridLayoutManager(itemView.context, columns)
-                if (itemView.list.adapter == null) {
-                    itemView.list.adapter = CategoriesGridAdapter(categories, onClick)
-                } else {
-                    (itemView.list.adapter as CategoriesGridAdapter).categories.clear()
-                    (itemView.list.adapter as CategoriesGridAdapter).categories.addAll(categories)
-                    itemView.list.adapter.notifyDataSetChanged()
-                }
+                itemView.list.setHasFixedSize(true)
+                itemView.list.adapter = CategoriesGridAdapter(categories, onClick)
             }
         }
     }

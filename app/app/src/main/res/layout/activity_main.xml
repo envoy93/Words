@@ -5,25 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/analogsLayout"
+    <FrameLayout
+        android:id="@+id/mainPanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/appBG"/>
 
-        <FrameLayout
-            android:id="@+id/mainPanel"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/ad"/>
-
-        <include
-            android:id="@+id/ad"
-            layout="@layout/ad"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"/>
-    </RelativeLayout>
+    <!--<include
+        android:id="@+id/ad"
+        layout="@layout/ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>-->
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation"

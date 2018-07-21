@@ -4,23 +4,22 @@
     <color name="colorPrimaryDark">#3e485d</color>
     <color name="colorAccent">#33b3ea</color>
 
-    <color name="filterBgOn">#fff</color>
-    <color name="filterBgOff">#b91828</color>
+    <color name="appBG">#ececed</color>
+    <color name="appTitle">#3e3d3e</color>
+    <color name="appSubTitle">#666</color>
+    <color name="appSubSubTitle">#a8b2bb</color>
+    <color name="appDivider">#eee</color>
 
-    <color name="background">#fff</color>
-    <color name="searchText">#fff</color>
-    <color name="searchTextHint">#ddd</color>
-    <color name="itemBG">#fff</color>
-    <color name="itemTitle">#3e3d3e</color>
-    <color name="itemSubTitle">#666</color>
-    <color name="itemSubSubTitle">#a8b2bb</color>
-    <color name="searchItemDivider">#eee</color>
-    <color name="analogsHeader">#ccc</color>
-    <color name="price">#ff0000</color>
-    <color name="analogsBG">#eeeeef</color>
+    <color name="cat1BG">#ed4950</color>
+    <color name="cat2BG">#fff</color>
 
     <color name="intro1">#0ba8f3</color>
     <color name="intro2">#4c6979</color>
+    <color name="splashTitle">#fff</color>
+    <color name="wordBG">#fff</color>
+    <color name="cat1Title">#fff</color>
+    <color name="cat2Number">#ff0000</color>
+    <color name="cat2Title">#000</color>
 
 
 </resources>

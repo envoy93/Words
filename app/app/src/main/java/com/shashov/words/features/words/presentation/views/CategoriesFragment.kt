@@ -33,7 +33,7 @@ class CategoriesFragment : LifecycleFragment() {
         super.onActivityCreated(savedInstanceState)
         var spanSize = 2
         list.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-
+        list.setItemViewCacheSize(20)
         categoriesViewModel = ViewModelProviders.of(activity!!).get(CategoriesViewModel::class.java)
 
         categoriesViewModel.getLoading().observe(this, Observer<Boolean> { isloading ->

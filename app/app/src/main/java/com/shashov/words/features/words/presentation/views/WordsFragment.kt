@@ -4,6 +4,7 @@ import android.arch.lifecycle.LifecycleFragment
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.support.v4.view.ViewCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.LayoutInflater
@@ -28,19 +29,26 @@ class WordsFragment : LifecycleFragment() {
         return inflater.inflate(R.layout.fragment_words, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        wordsViewModel = ViewModelProviders.of(activity!!).get(WordsViewModel::class.java)
+    fun init(){
+        ViewCompat.setNestedScrollingEnabled(list, false)
+        collapsing_toolbar.setExpandedTitleTextAppearance(R.style.ExpandedAppBar)
+        collapsing_toolbar.setCollapsedTitleTextAppearance(R.style.CollapsedAppBar)
         list.layoutManager = LinearLayoutManager(activity, LinearLayout.VERTICAL, false)
-        list?.isNestedScrollingEnabled = false
+        list.isNestedScrollingEnabled = false
         list.setHasFixedSize(true)
         list.setItemViewCacheSize(20)
         list.isDrawingCacheEnabled = true
         list.drawingCacheQuality = View.DRAWING_CACHE_QUALITY_HIGH
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        wordsViewModel = ViewModelProviders.of(activity!!).get(WordsViewModel::class.java)
+
+        init()
 
         wordsViewModel.getCategory().observe(this, Observer<Category> { c ->
-            if (c != null) category.text = c.title
+            if (c != null) collapsing_toolbar.title = c.title
         })
 
         wordsViewModel.getLoading().observe(this, Observer<Boolean> { isloading ->

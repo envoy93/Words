@@ -13,4 +13,5 @@
     <dimen name="textLarge">15.3sp</dimen>
     <dimen name="textBig">17.1sp</dimen>
     <dimen name="textSuperBig">18sp</dimen>
+    <dimen name="wordHeaderDetails">150dp</dimen>
 </resources>

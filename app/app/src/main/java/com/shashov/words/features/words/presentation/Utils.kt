@@ -37,16 +37,6 @@ enum class SearchType {
     DRUG, SUBSTANCE
 }
 
-fun TextView.on() {
-    setBackgroundColor(this.context.resources.getColor(R.color.filterBgOn))
-    setTextColor(this.context.resources.getColor(R.color.filterBgOff))
-}
-
-fun TextView.off() {
-    setBackgroundColor(Color.TRANSPARENT)
-    setTextColor(this.context.resources.getColor(R.color.filterBgOn))
-}
-
 fun View.show() {
     visibility = View.VISIBLE
 }

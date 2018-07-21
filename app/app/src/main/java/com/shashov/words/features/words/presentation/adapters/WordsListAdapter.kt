@@ -47,7 +47,7 @@ class WordsListAdapter(val words: List<Word>) : RecyclerView.Adapter<WordsListAd
         fun bindWord(word: Word) {
             with(word) {
                 itemView.title.text = title
-                itemView.transcription.text = transcription
+                itemView.transcription.text = "[$transcription]"
                 itemView.translate.text = translate
                 //itemView.example.text = example
             }
